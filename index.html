@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Job Application Tracker</title>
+  
+  <!-- tailwind and fonts -->
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+
+  <!-- daisyUi -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  
+</head>
+<body class="bg-slate-50 p-4 md:p-10 font-sans text-gray-800">
+  <div class="max-w-5xl mx-auto space-y-8">
+    <section class="bg-base-200 border-b-2 border-gray-300 p-6">
+      <h1 class="text-3xl font-bold text-gray-800 mb-4">Job Application Tracker</h1>
+      <div class="grid grid-cols-3 gap-6">
+        <div class="bg-white py-2 px-3 rounded-md">
+          <p class="text-gray-800 font-medium mb-1">Total</p>
+          <p id="count-total" class="text-4xl font-bold text-gray-800">0</p>
+        </div>
+        <div class="bg-white py-2 px-3 rounded-md">
+          <p class="text-gray-800 font-medium mb-1">Interview</p>
+          <p id="count-total" class="text-4xl font-bold text-green-500">0</p>
+        </div>
+        <div class="bg-white py-2 px-3 rounded-md">
+          <p class="text-gray-800 font-medium mb-1">Rejected</p>
+          <p id="count-total" class="text-4xl font-bold text-red-500">0</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="flex gap-4">
+      <button id="all-btn" class="btn btn-soft btn-info">All</button>
+      <button id="interview-btn" class="btn btn-soft btn-success">Interview</button>
+      <button id="rejected-btn" class="btn btn-soft btn-error">Rejected</button>
+    </div>
+
+    <div id="container" class="space-y-4"></div>
+  </div>
+
+  <script src="script.js"></script>
+  
+</body>
+</html>
