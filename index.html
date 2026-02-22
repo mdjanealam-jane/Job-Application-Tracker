@@ -11,6 +11,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
 
+  <!-- font awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
   <!-- daisyUi -->
   <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
@@ -18,34 +21,53 @@
 </head>
 <body class="bg-slate-50 p-4 md:p-10 font-sans text-gray-800">
   <div class="max-w-5xl mx-auto space-y-8">
-    <section class="bg-base-200 border-b-2 border-gray-300 p-6">
-      <h1 class="text-3xl font-bold text-gray-800 mb-4">Job Application Tracker</h1>
-      <div class="grid grid-cols-3 gap-6">
-        <div class="bg-white py-2 px-3 rounded-md">
+    <section class="bg-base-200 border-b-2 border-gray-300 py-6">
+      <h1 class="text-xl md:text-3xl font-bold text-gray-800 mb-6">Job Application Tracker</h1>
+      <div class="grid grid-cols-3 gap-4 md:gap-6">
+        <div class="bg-white py-2 px-4 rounded-md">
           <p class="text-gray-800 font-medium mb-1">Total</p>
-          <p id="count-total" class="text-4xl font-bold text-gray-800">0</p>
+          <p id="total-job" class="text-xl md:text-4xl font-bold text-gray-800">0</p>
         </div>
-        <div class="bg-white py-2 px-3 rounded-md">
+        <div class="bg-white py-2 px-4 rounded-md">
           <p class="text-gray-800 font-medium mb-1">Interview</p>
-          <p id="count-total" class="text-4xl font-bold text-green-500">0</p>
+          <p id="total-interview" class="text-xl md:text-4xl font-bold text-teal-500">0</p>
         </div>
-        <div class="bg-white py-2 px-3 rounded-md">
+        <div class="bg-white py-2 px-4 rounded-md">
           <p class="text-gray-800 font-medium mb-1">Rejected</p>
-          <p id="count-total" class="text-4xl font-bold text-red-500">0</p>
+          <p id="total-rejected" class="text-xl md:text-4xl font-bold text-red-500">0</p>
         </div>
       </div>
     </section>
 
+    <p class="text-gray-900 font-bold text-xl">Available Jobs</p>
     <div class="flex gap-4">
-      <button id="all-btn" class="btn btn-soft btn-info">All</button>
-      <button id="interview-btn" class="btn btn-soft btn-success">Interview</button>
-      <button id="rejected-btn" class="btn btn-soft btn-error">Rejected</button>
+      <button id="all-btn" class="btn btn-soft bg-white hover:bg-blue-500 hover:text-white text-gray-600">All</button>
+      <button id="interview-btn" class="btn btn-soft hover:bg-teal-600 hover:text-white bg-white text-gray-600">Interview</button>
+      <button id="rejected-btn" class="btn btn-soft hover:bg-red-600 hover:text-white bg-white text-gray-600">Rejected</button>
     </div>
 
     <div id="container" class="space-y-4"></div>
+
+    <div id="hidden-card" class="hidden bg-white rounded-lg p-6 relative">
+      <h3 class="company-name text-lg font-bold text-gray-900"></h3>
+      <p class="job-position text-gray-600 text-sm mt-1 mb-4"></p>
+      <div class="flex flex-wrap gap-2 text-sm text-gray-500 mb-4 font-medium">
+        <span class="job-location"></span> •
+        <span class="job-type"></span> •
+        <span class="job-salary"></span>
+      </div>
+      <span class="job-status px-3 py-1 rounded text-sm font-bold bg-blue-50 text-gray-600">NOT APPLIED</span>
+      <p class="job-description text-gray-600 text-sm my-4"></p>
+      
+      <div>
+        <button class="btn btn-soft btn-success">INTERVIEW</button>
+        <button class="btn btn-soft btn-error">REJECTED</button>
+        <button class="btn bg-white rounded-full p-3 absolute top-4 right-4 text-gray-500 hover:bg-red-300"><i class="fa-solid fa-trash-can"></i></button>
+      </div>
+    </div>
   </div>
 
   <script src="script.js"></script>
-  
+
 </body>
 </html>
