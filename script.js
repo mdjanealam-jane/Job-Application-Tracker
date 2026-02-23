@@ -162,17 +162,36 @@ const btnAll = document.getElementById('all-btn');
 const btnInterview = document.getElementById('interview-btn');
 const btnRejected = document.getElementById('rejected-btn');
 
+function tabColorChange(){
+  btnAll.className = "btn btn-soft bg-white hover:bg-blue-500 hover:text-white text-gray-600";
+  btnInterview.className = "btn btn-soft hover:bg-teal-600 hover:text-white bg-white text-gray-600";
+  btnRejected.className = "btn btn-soft hover:bg-red-600 hover:text-white bg-white text-gray-600";
+
+  if (currentTab === 'all') {
+    btnAll.className = "btn btn-soft bg-blue-500 text-white";
+  } 
+  else if (currentTab === 'interview') {
+    btnInterview.className = "btn btn-soft bg-teal-600 text-white";
+  } 
+  else if (currentTab === 'rejected') {
+    btnRejected.className = "btn btn-soft bg-red-600 text-white";
+  }
+}
+
 btnAll.onclick = function(){
   currentTab = 'all';
+  tabColorChange();
   showingJobs();
 };
 
 btnInterview.onclick = function(){
   currentTab = 'interview';
+  tabColorChange();
   showingJobs();
 };
 
 btnRejected.onclick = function(){
   currentTab = 'rejected';
+  tabColorChange();
   showingJobs();
 }
