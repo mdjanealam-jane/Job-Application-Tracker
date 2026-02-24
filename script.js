@@ -122,17 +122,17 @@ function showingJobs(){
     let rejectedbtn = newCard.querySelector('.btn-rejected');
     let deletebtn = newCard.querySelector('.btn-delete');
 
-    interviewbtn.onclick = function(){
+    interviewbtn.addEventListener('click', function(){
       changeJobStatus(job.id, 'interview');
-    };
+    });
 
-    rejectedbtn.onclick = function(){
+    rejectedbtn.addEventListener('click', function(){
       changeJobStatus(job.id, 'rejected');
-    };
+    });
 
-    deletebtn.onclick = function(){
+    deletebtn.addEventListener('click', function(){
       deleteJob(job.id);
-    };
+    });
     container.appendChild(newCard);
   });
 
@@ -178,20 +178,20 @@ function tabColorChange(){
   }
 }
 
-btnAll.onclick = function(){
+btnAll.addEventListener('click', function(){
   currentTab = 'all';
-  tabColorChange();
+  updateTabColors();
   showingJobs();
-};
+});
 
-btnInterview.onclick = function(){
+btnInterview.addEventListener('click', function(){
   currentTab = 'interview';
-  tabColorChange();
+  updateTabColors();
   showingJobs();
-};
+});
 
-btnRejected.onclick = function(){
+btnRejected.addEventListener('click', function(){
   currentTab = 'rejected';
-  tabColorChange();
+  updateTabColors();
   showingJobs();
-}
+});
