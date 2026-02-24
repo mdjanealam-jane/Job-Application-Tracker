@@ -92,10 +92,10 @@ function showingJobs(){
   }
 
   if (currentTab === 'all'){
-    jobCount.innerText = showJobs.length + 'jobs';
+    jobCount.innerText = showJobs.length + ' jobs';
   }
   else{
-    jobCount.innerText = showJobs.length + 'of' + jobs.length + 'jobs';
+    jobCount.innerText = showJobs.length + ' of ' + jobs.length + ' jobs';
   }
 
   if (showJobs.length === 0) {
@@ -203,3 +203,5 @@ btnRejected.addEventListener('click', function(){
   tabColorChange();
   showingJobs();
 });
+
+tabColorChange();
