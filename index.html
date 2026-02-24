@@ -40,31 +40,31 @@
     </section>
 
     <div class="flex justify-between items-center mb-4 mt-8">
-      <p class="text-gray-900 font-bold text-xl">Available Jobs</p>
+      <p class="text-gray-800 font-bold text-xl">Available Jobs</p>
       <p id="job-count" class="text-gray-500 font-medium">0 jobs</p>
     </div>
     <div class="flex gap-4">
       <button id="all-btn" class="btn btn-soft bg-white hover:bg-blue-500 hover:text-white text-gray-600">All</button>
-      <button id="interview-btn" class="btn btn-soft hover:bg-teal-600 hover:text-white bg-white text-gray-600">Interview</button>
+      <button id="interview-btn" class="btn btn-soft hover:bg-teal-500 hover:text-white bg-white text-gray-600">Interview</button>
       <button id="rejected-btn" class="btn btn-soft hover:bg-red-600 hover:text-white bg-white text-gray-600">Rejected</button>
     </div>
 
     <div id="container" class="space-y-4"></div>
 
     <div id="hidden-card" class="hidden bg-white rounded-lg p-6 relative">
-      <h3 class="company-name text-lg font-bold text-gray-900"></h3>
+      <h3 class="company-name text-lg font-bold text-gray-800"></h3>
       <p class="job-position text-gray-600 text-sm mt-1 mb-4"></p>
       <div class="flex flex-wrap gap-2 text-sm text-gray-500 mb-4 font-medium">
         <span class="job-location"></span> •
         <span class="job-type"></span> •
         <span class="job-salary"></span>
       </div>
-      <span class="job-status px-3 py-1 rounded text-sm font-bold bg-blue-50 text-gray-600">NOT APPLIED</span>
+      <span class="job-status px-3 py-1 rounded text-xs font-bold bg-blue-50 text-gray-600">NOT APPLIED</span>
       <p class="job-description text-gray-600 text-sm my-4"></p>
       
       <div>
-        <button class="btn-interview btn btn-soft btn-success">INTERVIEW</button>
-        <button class="btn-rejected btn btn-soft btn-error">REJECTED</button>
+        <button class="btn-interview btn btn-soft btn-success hover:text-white hover:bg-teal-500">INTERVIEW</button>
+        <button class="btn-rejected btn btn-soft btn-error hover:text-white hover:bg-red-600">REJECTED</button>
         <button class="btn-delete btn bg-white rounded-full p-3 absolute top-4 right-4 text-gray-500 hover:bg-red-300"><i class="fa-solid fa-trash-can"></i></button>
       </div>
     </div>

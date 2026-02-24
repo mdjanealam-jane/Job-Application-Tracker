@@ -46,6 +46,48 @@ let jobs = [
     location: 'Chicago, IL', type: 'Full-time', salary: '$120,000 - $145,000',
     description: 'Lead the development lifecycle of our green-shipping route optimization software from ideation to launch.',
     status: 'none'
+  },
+  {
+    id: 9, companyName: 'PixelPerfect', position: 'UX/UI Designer',
+    location: 'Remote', type: 'Contract', salary: '$70/hr',
+    description: 'Create wireframes, interactive prototypes, and user-centered designs for our upcoming SaaS platforms using Figma.',
+    status: 'none'
+  },
+  {
+    id: 10, companyName: 'TechNova', position: 'Full Stack Developer',
+    location: 'Austin, TX', type: 'Full-time', salary: '$135,000 - $160,000',
+    description: 'Develop dynamic web applications using the MERN stack. Collaborate with product teams to define and implement new features.',
+    status: 'none'
+  },
+  {
+    id: 11, companyName: 'CloudScale', position: 'DevOps Engineer',
+    location: 'Seattle, WA', type: 'Full-time', salary: '$140,000 - $170,000',
+    description: 'Automate CI/CD pipelines, manage Kubernetes clusters, and ensure high availability of our enterprise cloud infrastructure.',
+    status: 'none'
+  },
+  {
+    id: 12, companyName: 'AppMasters', position: 'iOS Developer',
+    location: 'San Francisco, CA', type: 'Full-time', salary: '$130,000 - $165,000',
+    description: 'Build scalable native iOS apps using Swift and SwiftUI. Focus on performance optimization and smooth user animations.',
+    status: 'none'
+  },
+  {
+    id: 13, companyName: 'DataDriven LLC', position: 'Data Analyst',
+    location: 'Chicago, IL', type: 'Part-time', salary: '$60,000 - $80,000',
+    description: 'Analyze customer behavior data, create complex SQL dashboards, and present actionable insights to the marketing team.',
+    status: 'none'
+  },
+  {
+    id: 14, companyName: 'PlayStudios', position: 'Game Developer',
+    location: 'Remote', type: 'Full-time', salary: '$110,000 - $140,000',
+    description: 'Develop core gameplay mechanics using Unity and C#. Work closely with 3D artists and level designers to build immersive worlds.',
+    status: 'none'
+  },
+  {
+    id: 15, companyName: 'BugFree Tech', position: 'QA Automation Engineer',
+    location: 'New York, NY', type: 'Full-time', salary: '$100,000 - $125,000',
+    description: 'Write automated end-to-end tests using Cypress and Selenium. Ensure top-notch software quality before every major release.',
+    status: 'none'
   }
 ];
 
