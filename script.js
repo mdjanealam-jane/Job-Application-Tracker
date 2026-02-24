@@ -56,6 +56,7 @@ const hiddenCard = document.getElementById('hidden-card');
 const totaljob = document.getElementById('total-job');
 const totalInterview = document.getElementById('total-interview');
 const totalRejected = document.getElementById('total-rejected');
+const jobCount = document.getElementById('job-count');
 
 function updateDashboard() {
   let allJobs = jobs.length;
@@ -88,6 +89,13 @@ function showingJobs(){
     showJobs = jobs.filter(function(job){
       return job.status === 'rejected';
     });
+  }
+
+  if (currentTab === 'all'){
+    jobCount.innerText = showJobs.length + 'jobs';
+  }
+  else{
+    jobCount.innerText = showJobs.length + 'of' + jobs.length + 'jobs';
   }
 
   if (showJobs.length === 0) {
@@ -180,18 +188,18 @@ function tabColorChange(){
 
 btnAll.addEventListener('click', function(){
   currentTab = 'all';
-  updateTabColors();
+  tabColorChange();
   showingJobs();
 });
 
 btnInterview.addEventListener('click', function(){
   currentTab = 'interview';
-  updateTabColors();
+  tabColorChange();
   showingJobs();
 });
 
 btnRejected.addEventListener('click', function(){
   currentTab = 'rejected';
-  updateTabColors();
+  tabColorChange();
   showingJobs();
 });
